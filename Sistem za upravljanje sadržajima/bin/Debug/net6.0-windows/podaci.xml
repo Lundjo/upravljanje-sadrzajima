@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfIgra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Igra>
+    <Godina>2019</Godina>
+    <Naziv>Dirt Rally 2</Naziv>
+    <Slika>file:///C:/Sistem za upravljanje sadržajima/Sistem za upravljanje sadržajima/Slike/59UfzHlIjF8VYee5ivYYZdW8vhuHA0Df.jpg</Slika>
+    <Rtf>Dirt Rally 2.rtf</Rtf>
+    <Dodavanje>2023-03-31T15:27:55.5985536+02:00</Dodavanje>
+    <IsChecked>false</IsChecked>
+  </Igra>
+  <Igra>
+    <Godina>2018</Godina>
+    <Naziv>Forza Horizon 4</Naziv>
+    <Slika>file:///C:/Sistem za upravljanje sadržajima/Sistem za upravljanje sadržajima/Slike/256264010.jpg</Slika>
+    <Rtf>Forza Horizon 4.rtf</Rtf>
+    <Dodavanje>2023-03-31T15:30:26.7333993+02:00</Dodavanje>
+    <IsChecked>false</IsChecked>
+  </Igra>
+</ArrayOfIgra>

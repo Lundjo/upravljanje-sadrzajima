@@ -1,0 +1,55 @@
+﻿<Window x:Class="Sistem_za_upravljanje_sadržajima.Dodavanje"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sistem_za_upravljanje_sadržajima"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Dodavanje" Height="650" Width="600" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Sistem za upravljanje sadržajima\Sistem za upravljanje sadržajima\dodavanjeslk.jpg" Opacity="0.5"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Label Content="Naziv:" Margin="10 33 500 65" FontSize="20" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <TextBox Name="NazivIgre" Margin="85 37 270 69" Height="30" Width="220" HorizontalAlignment="Center" Padding="3" FontWeight="Bold"/>
+            <Label Content="Godina:" Margin="10 89 490 10" FontSize="20" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <TextBox Name="GodinaIzdavanja" Margin="85 92 270 14" Height="30" Width="220" HorizontalAlignment="Center" Padding="3" FontWeight="Bold"/>
+            <Button Name="BtnSlika" Content="Slika..." HorizontalAlignment="Center" Height="20" Width="60" Margin="350 0 10 100" Click="BtnSlika_Click" FontWeight="Bold"/>
+            <Image Name="Slika" Margin="350 40 0 10" Width="200" Height="90"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <DockPanel Canvas.Left="10" Canvas.Top="58"  Margin="10 10 10 10">
+                <ToolBar Name="MainToolbar" DockPanel.Dock="Top" Width="550">
+                    <ToggleButton Command="EditingCommands.ToggleBold" Name="btnBold" Content="B"/>
+                    <ToggleButton Command="EditingCommands.ToggleItalic" Name="btnItalic" Content="I"/>
+                    <ToggleButton Command="EditingCommands.ToggleUnderline" Name="btnUnderline" Content="U"/>
+                    <Separator />
+                    <ComboBox Name="cmbFontFamily" Width="150" SelectionChanged="cmbFontFamily_SelectionChanged" Margin="10 0 0 0"/>
+                    <ComboBox Name="cmbVelicina" Width="50" SelectionChanged="cmbVelicina_SelectionChanged" Margin="10 0 0 0"/>
+                    <ComboBox Name="cmbBoje" SelectionChanged="cmbBoje_SelectionChanged" Margin="10 0 0 0" Width="80">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Name, StringFormat='{}{0}\   '}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                </ToolBar>
+                <RichTextBox Name="rtbEditor" SelectionChanged="rtbEditor_SelectionChanged" Margin="10 10 10 40" TextChanged="rtbEditor_TextChanged"/>
+            </DockPanel>
+            <Label Name="brrc" Content="Broj reči: 0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 40 0" FontSize="20" />
+        </Grid>
+        <Grid Grid.Row="2">
+            <Button Name="BtnSacuvaj" Content="Sačuvaj" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="100" Margin="10 10 200 10" Click="BtnSacuvaj_Click" Background="LightGreen" FontWeight="Bold"/>
+            <Button Name="BtnOtkazi" Content="Otkaži" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="100" Margin="200 10 10 10" Click="BtnOtkazi_Click" Background="IndianRed" FontWeight="Bold"/>
+        </Grid>
+    </Grid>
+</Window>
